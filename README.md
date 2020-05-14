@@ -30,4 +30,7 @@ USACE project webpage <https://www.saj.usace.army.mil/LOSOM/>
 
 ## Water Quality Subteam
 
+  - [ ] Develop a nutrient (TP and TN) loading and/or concentration
+    model for CRE and STL.
+
 -----
