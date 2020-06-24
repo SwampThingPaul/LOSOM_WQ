@@ -40,3 +40,5 @@ vignettes/*.pdf
 /data/
 /README.Rmd
 /DoeringModel/
+/_manuscript/
+/_presentations/
