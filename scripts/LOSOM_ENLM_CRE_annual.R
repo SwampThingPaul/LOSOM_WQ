@@ -375,7 +375,7 @@ rslt=booteval.relimp(boot,sort=TRUE)
 pick=which.max(rslt@level)
 index <- sort(rslt@lmg, decreasing = T, index = T)$ix
 xnames=rslt@namen[2:((length(rslt@namen) - 1) + 1)][index];xnames
-xlabs=c(expression(paste("Q"["C43"])),"Mean Lake\nStage",expression(paste("Q"["S77"])))
+xlabs=c(expression(paste("Q"["C43 Basin"])),"Mean Lake\nStage",expression(paste("Q"["S77"])))
 
 ylim.val=c(0,1.05);by.y=0.2;ymaj=seq(ylim.val[1],ylim.val[2],by.y);ymin=seq(ylim.val[1],ylim.val[2],by.y/2)
 #tiff(filename=paste0(plot.path,"CRE_WY_TPMod_relaimpo.tiff"),width=3,height=3.5,units="in",res=200,type="windows",compression=c("lzw"),bg="white")
@@ -554,7 +554,7 @@ rslt=booteval.relimp(boot,sort=TRUE)
 pick=which.max(rslt@level)
 index <- sort(rslt@lmg, decreasing = T, index = T)$ix
 xnames=rslt@namen[2:((length(rslt@namen) - 1) + 1)][index];xnames
-xlabs=c(expression(paste("Q"["C43"])),expression(paste("Q"["S77"])),"Mean Lake\nStage")
+xlabs=c(expression(paste("Q"["C43 Basin"])),expression(paste("Q"["S77"])),"Mean Lake\nStage")
 
 ylim.val=c(0,1.05);by.y=0.2;ymaj=seq(ylim.val[1],ylim.val[2],by.y);ymin=seq(ylim.val[1],ylim.val[2],by.y/2)
 #tiff(filename=paste0(plot.path,"CRE_WY_TNMod_relaimpo.tiff"),width=3,height=3.5,units="in",res=200,type="windows",compression=c("lzw"),bg="white")
@@ -854,3 +854,6 @@ legend(0.30,0.5,legend=c("RSM-BN LORS08\n(WY1966 - 2016)","Observed\n(WY1980 - 2
        pt.cex=1.5,ncol=1,cex=0.8,bty="n",y.intersp=1.25,x.intersp=0.75,xpd=NA,xjust=0.5,yjust=0.5,
        title="Scenario\n(Mean \u00B1 SE)",title.adj = 0)
 dev.off()
+
+plot(Q.S77~WY,RSM.cre.hydro,xlim=c(1966,2019),type="l")
+with(q.cre.dat.xtab.WY,lines(WY,Q.S77,col="red"))
